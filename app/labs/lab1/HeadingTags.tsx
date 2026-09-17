@@ -2,7 +2,12 @@ export default function HeadingTags() {
   return (
     <>
     <div id="wd-h-tag">
+      <h1>Heading Tags</h1>
+      <h2>Heading Tags</h2>
+      <h3>Heading Tags</h3>
       <h4>Heading Tags</h4>
+      <h5>Heading Tags</h5>
+      <h6>Heading Tags</h6>
       Text documents are often broken up into several sections and subsections.
       Each section is usually prefaced with a short title or heading that
       attempts to summarize the topic of the section it precedes. For instance
@@ -16,10 +21,10 @@ export default function HeadingTags() {
       <span id="wd-inline-span">span</span> sits in this sentence without
       starting a new line.
     </div>
-    <div id="Daoud Sherkawi">
+    <div id="wd-your-heading">
         <h4>Daoud Sherkawi</h4>
         Hi, my name is Daoud Sherkawi. I am an align masters CS student at Northeastern University.
-        I am in my last year and a hobby of mine is that I train <span id="wd-daoud-inline-span">MMA</span>.
+        I am in my last year and a hobby of mine is that I train <span id="wd-your-span">MMA</span>.
     </div>
     <div id="wd-ai-headings">
         <h4>Lab notes</h4>

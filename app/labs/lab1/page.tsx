@@ -7,7 +7,7 @@ export default function Lab1() {
       <h3>HTML Examples</h3>
       <HeadingTags />
       {/* do the next exercise here */}
-      <div id = "Daoud Sherkawi"> </div>
+
 
 
     </div>
