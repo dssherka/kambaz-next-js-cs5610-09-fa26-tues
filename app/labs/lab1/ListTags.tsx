@@ -16,7 +16,7 @@ export default function ListTags() {
         </ol>
 
     My favorite animes (couldn't think of recipes so chose somthing easier):
-    <ol id="wd-my-animes">
+    <ol id="wd-your-favorite-recipe">
         <li>Attack on Titan</li>
         <li>JJK</li>
         <li>Vinland Saga</li>
@@ -27,7 +27,7 @@ export default function ListTags() {
 
       <h5>Unordered List Tag</h5>
         My favorite books (in no particular order)
-        <ul id="wd-my-books">
+        <ul id="wd-your-books">
         <li>Dune</li>
         <li>Lord of the Rings</li>
         <li>Ender&apos;s Game</li>

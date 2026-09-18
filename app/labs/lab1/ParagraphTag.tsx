@@ -24,12 +24,12 @@ export default function ParagraphTag() {
         tag to tell browsers to render the gaps.
       </p>
 
-      <p id="wd-p-daoud-1">
+      <p id="wd-p-your-1">
         I am from Indiana as well a first generation Palestininan-American. I moved to Boston fall of 25 and have fallen in love with the city's beauty and architecture.
         The public tranist system was a culture shock as I am used to cars. It is very useful as driving in the city is a nightmare.
       </p>
 
-      <p id="wd-p-daoud-2">
+      <p id="wd-p-your-2">
         What I hope to learn from this course is to understand how to build web applications
         in order to better my ability to create and build meaningful projects that could potentially assist people, specifically in the healthcare field.
 
