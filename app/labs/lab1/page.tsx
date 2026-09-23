@@ -12,6 +12,9 @@ export default function Lab1() {
       <ParagraphTag />
       <ListTags />
       <Tables />
+      <a id="wd-github" href="https://github.com/dssherka/kambaz-node-server-app">
+        Public Repo
+      </a>
       {/* do the next exercise here */}
 
 
