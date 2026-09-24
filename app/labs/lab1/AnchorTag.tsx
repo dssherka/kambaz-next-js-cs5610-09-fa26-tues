@@ -33,11 +33,11 @@ export default function AnchorTag() {
     GitHub (new tab)
     </a>
     <h4>My Anchor Tags</h4>
-    <a href="https://store.steampowered.com/" id="wd-daoud-link">Steam</a>
+    <a href="https://store.steampowered.com/" id="wd-your-link">Steam</a>
     <br/>
     <a
         href="https://www.linkedin.com/in/daoud-sherkawi-5553331b0"
-        id="wd-daoud-linkedin"
+        id="wd-your-github"
         target="_blank"
         rel="noreferrer"
         >Daoud Linkedin</a>
