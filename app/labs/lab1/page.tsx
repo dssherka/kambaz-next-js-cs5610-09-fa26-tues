@@ -6,6 +6,7 @@ import Images from "./Images";
 import Forms from "./forms/Forms";
 import HighlightedParagraph from "./HighlightedParagraph";
 import HighlightedBox from "./HighlightedBox";
+import AnchorTag from "./AnchorTag";
 
 
 export default function Lab1() {
@@ -13,9 +14,6 @@ export default function Lab1() {
     <div id="wd-lab1">
       <h2>Lab 1</h2>
       <h3>HTML Examples</h3>
-      <a id="wd-github" href="https://github.com/dssherka/kambaz-next-js-cs5610-09-fa26-tues.git">
-        Public Repo
-      </a>
       <HeadingTags />
       <ParagraphTag />
       <ListTags />
@@ -24,6 +22,7 @@ export default function Lab1() {
       <Forms />
       <HighlightedParagraph />
       <HighlightedBox />
+      <AnchorTag />
 
 
 

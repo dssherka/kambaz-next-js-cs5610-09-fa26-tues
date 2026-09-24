@@ -76,6 +76,18 @@ export default function HighlightedBoxLab() {
                 <li>Be able to understand and implement RESTful APIs</li>
             </ul>
         </HighlightedBox>
+
+      <HighlightedBox
+        backgroundColor="honeydew"
+        borderColor="seagreen"
+      >
+        <h4>Sample nested content</h4>
+        <ul>
+          <li>p</li>
+          <li>table</li>
+          <li>form</li>
+        </ul>
+      </HighlightedBox>
     </div>
   );
 }
