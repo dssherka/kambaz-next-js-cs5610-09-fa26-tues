@@ -32,7 +32,7 @@ export default function KambazNavigation() {
         Inbox
       </Link>
       <br />
-      <Link href="/" id="wd-labs-link">
+      <Link href="/labs" id="wd-labs-link">
         Labs
       </Link>
       <br />
