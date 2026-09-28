@@ -14,7 +14,7 @@ export default function CourseCard({
 }) {
   return (
     <div className="wd-dashboard-course">
-      <Link href={`/kambaz/Courses/${id}/home`} className="wd-dashboard-course-link">
+      <Link href={`/courses/${id}/home`} className="wd-dashboard-course-link">
         <Image src={image} width={200} height={150} alt={title} />
         <div>
           <h5>{title}</h5>

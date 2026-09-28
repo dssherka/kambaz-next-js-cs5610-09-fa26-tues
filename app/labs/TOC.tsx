@@ -11,7 +11,7 @@ export default function TOC() {
         <li><Link href="/labs/lab4" id="wd-lab4-link">Lab 4</Link></li>
         <li><Link href="/labs/lab5" id="wd-lab5-link">Lab 5</Link></li>
         <li><Link href="https://kambaz.dev/book/ch1" id="wd-toc-book-link">Chapter 1</Link></li>
-        <li><Link href="/kambaz/Account" id="wd-kambaz-link">Kambaz</Link></li>
+        <li><Link href="/account" id="wd-kambaz-link">Kambaz</Link></li>
       </ul>
     </div>
   );

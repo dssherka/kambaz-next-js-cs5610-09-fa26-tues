@@ -17,11 +17,11 @@ export default function Signin() {
         defaultValue="123"
       />{" "}
       <br />
-      <Link href="/kambaz/Dashboard" id="wd-signin-btn">
+      <Link href="/dashboard" id="wd-signin-btn">
         Sign in
       </Link>{" "}
       <br />
-      <Link href="/kambaz/Account/Signup" id="wd-signup-link">
+      <Link href="/account/signup" id="wd-signup-link">
         Sign up
       </Link>
     </div>

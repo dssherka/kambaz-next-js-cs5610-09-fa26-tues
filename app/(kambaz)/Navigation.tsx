@@ -12,23 +12,23 @@ export default function KambazNavigation() {
         Northeastern
       </a>
       <br />
-      <Link href="/kambaz/Account" id="wd-account-link">
+      <Link href="/account" id="wd-account-link">
         Account
       </Link>
       <br />
-      <Link href="/kambaz/Dashboard" id="wd-dashboard-link">
+      <Link href="/dashboard" id="wd-dashboard-link">
         Dashboard
       </Link>
       <br />
-      <Link href="/kambaz/Courses" id="wd-course-link">
+      <Link href="/courses" id="wd-course-link">
         Courses
       </Link>
       <br />
-      <Link href="/kambaz/Calendar" id="wd-calendar-link">
+      <Link href="/calendar" id="wd-calendar-link">
         Calendar
       </Link>
       <br />
-      <Link href="/kambaz/Inbox" id="wd-inbox-link">
+      <Link href="/inbox" id="wd-inbox-link">
         Inbox
       </Link>
       <br />

@@ -36,7 +36,7 @@ export default function Profile() {
         <option value="STUDENT">Student</option>
       </select>
       <br />
-      <Link href="/kambaz/Account/Signin">Sign out</Link>
+      <Link href="/account/signin">Sign out</Link>
     </div>
   );
 }
