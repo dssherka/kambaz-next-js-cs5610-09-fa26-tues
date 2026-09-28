@@ -1,8 +1,5 @@
-export default function Account() {
-    return (
-    <div>
-        <h1>Account</h1>
-    </div>
+import { redirect } from "next/navigation";
 
-    );
+export default function AccountPage() {
+  redirect("/kambaz/Account/Signin");
 }

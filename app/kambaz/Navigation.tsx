@@ -1,15 +1,41 @@
 import Link from "next/link";
 
-export default function Navigation() {
-    return (
-        <ul>
-            <li><Link href="https://northeastern.instructure.com/">Northeastern</Link></li>
-            <li><Link href="/kambaz/Account">Account</Link></li>
-            <li><Link href="/kambaz/Dashboard">Dashboard</Link></li>
-            <li><Link href="/kambaz/Courses">Courses</Link></li>
-            <li><Link href="/kambaz/History">History</Link></li>
-            <li><Link href="/kambaz/Inbox">Inbox</Link></li>
-            <li><Link href="/kambaz/Calendar">Calendar</Link></li>
-        </ul>
-    );
+export default function KambazNavigation() {
+  return (
+    <div id="wd-kambaz-navigation">
+      <a
+        href="https://www.northeastern.edu/"
+        id="wd-neu-link"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Northeastern
+      </a>
+      <br />
+      <Link href="/kambaz/Account" id="wd-account-link">
+        Account
+      </Link>
+      <br />
+      <Link href="/kambaz/Dashboard" id="wd-dashboard-link">
+        Dashboard
+      </Link>
+      <br />
+      <Link href="/kambaz/Courses" id="wd-course-link">
+        Courses
+      </Link>
+      <br />
+      <Link href="/kambaz/Calendar" id="wd-calendar-link">
+        Calendar
+      </Link>
+      <br />
+      <Link href="/kambaz/Inbox" id="wd-inbox-link">
+        Inbox
+      </Link>
+      <br />
+      <Link href="/" id="wd-labs-link">
+        Labs
+      </Link>
+      <br />
+    </div>
+  );
 }
