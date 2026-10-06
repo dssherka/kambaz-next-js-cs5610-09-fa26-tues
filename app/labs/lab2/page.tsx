@@ -1,10 +1,14 @@
+import React from "react";
 import "./index.css";
+import ForegroundColors from "./ForegroundColors";
+import BackgroundColors from "./BackgroundColors";
+import Borders from "./Borders";
 
 
 export default function Lab2() {
   return (
     <>
-    <div id="wd-lab2">
+      <div id="wd-lab2">
           <h2>Lab 2 - Cascading Style Sheets</h2>
           <h3>Styling with the STYLE attribute</h3>
           <p>
@@ -99,6 +103,18 @@ export default function Lab2() {
   </blockquote>
 </div>
 
+<div id="wd-ai-cascade-demo">
+  <h3>Cascade demo</h3>
+  <p id="wd-ai-cascade" className="wd-ai-cascade">
+    This paragraph is matched by a tag rule, a class rule, and an id rule.
+    The id rule should win.
+  </p>
+</div>
+<ForegroundColors />
+<BackgroundColors />
+<Borders />
+
     </>
+
   );
 }
