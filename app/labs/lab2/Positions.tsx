@@ -22,4 +22,4 @@ export default function Positions() {
       </div>
     </div>
   );
-}s
+}
