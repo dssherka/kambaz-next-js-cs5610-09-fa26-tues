@@ -10,6 +10,12 @@ import Corners from "./Corners";
 import Dimensions from "./Dimensions";
 import Display from "./Display";
 import Positions from "./Positions";
+import Zindex from "./Zindex";
+import Float from "./Float";
+import GridLayout from "./GridLayout";
+import Flex from "./Flex";
+import MediaQueriesDemo from "./MediaQueriesDemo";
+import ReactIconsSampler from "./ReactIconsSampler";
 
 
 export default function Lab2() {
@@ -17,6 +23,9 @@ export default function Lab2() {
     <>
       <div id="wd-lab2">
           <h2>Lab 2 - Cascading Style Sheets</h2>
+          <p>
+            <a href="/labs/lab2/tailwind">Open Tailwind CSS lab →</a>
+          </p>
           <h3>Styling with the STYLE attribute</h3>
           <p>
               Style attribute allows configuring look and feel right on the
@@ -127,6 +136,12 @@ export default function Lab2() {
 <Dimensions />
 <Display />
 <Positions />
+<Zindex/>
+<Float />
+<GridLayout />
+<Flex />
+<MediaQueriesDemo />
+<ReactIconsSampler />
 
     </>
 
