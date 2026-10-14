@@ -11,6 +11,7 @@ export default function BooleanVariables() {
   let true5 = floatingPointNumber !== 321.432;
   let false3 = numberVariable < 100;
   let true6 = nameVariable === "Daoud"
+  const true7 = numberVariable !== 0;
 
   return (
     <div id="wd-boolean-variables">
@@ -32,6 +33,8 @@ export default function BooleanVariables() {
       false3 = {false3 + ""}
       <br/>
       true6 = {true6 + ""}
+      <br />
+      true7 = {true7 + ""}
       <hr />
     </div>
   );
