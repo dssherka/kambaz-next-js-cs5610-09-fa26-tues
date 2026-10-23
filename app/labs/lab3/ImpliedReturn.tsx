@@ -13,6 +13,8 @@ export default function ImpliedReturn() {
       <br />
       square9 = {square9}
       <br/>
+      square(9) = {square(9)}
+      <br/>
       multiply(4, 5) = {multiply(4, 5)}
       <br />
       divide(20, 4) = {divide(20, 4)}

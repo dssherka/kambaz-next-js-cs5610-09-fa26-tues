@@ -25,6 +25,8 @@ export default function ArrowFunctions() {
       fivePlusTwo = {fivePlusTwo}
       <br />
       add(5, 2) = {add(5, 2)}
+      <br />
+      add(2, 4) = {add(2, 4)}
       <hr />
     </div>
   );

@@ -1,14 +1,13 @@
 export default function ForLoops() {
   let stringArray1 = ["string1", "string3"];
   let stringArray2: string[] = [];
-  let stringArray3: string[] = ["Cat", "Dog"];
+  let stringArray3: string[] = [];
   let stringLengths: number[] = [];
   for (let i = 0; i < stringArray1.length; i++) {
     const string1 = stringArray1[i];
-    const string2 = stringArray3[i];
     stringArray2.push(string1.toUpperCase());
+    stringArray3.push(string1.toLowerCase());
     stringLengths.push(string1.length);
-    stringArray3.push(string2.toLowerCase());
   }
   return (
     <div id="wd-for-loops">

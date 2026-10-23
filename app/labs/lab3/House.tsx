@@ -30,6 +30,8 @@ export default function House() {
         {house.yearBuilt}
       <h5>garage cars</h5>
       {house.garage.cars}
+      <h5>Number of properties</h5>
+      {Object.keys(house).length}
       <h5>Data</h5>
       <pre>{JSON.stringify(house, null, 2)}</pre>
       <hr />
