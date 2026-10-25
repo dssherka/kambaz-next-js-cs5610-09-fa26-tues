@@ -1,0 +1,242 @@
+[
+  {
+    "_id": "M101",
+    "name": "Introduction to Rocket Propulsion",
+    "description": "Introduction to Rocket Propulsion for RS101.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": "L1011",
+        "name": "History of Rocketry",
+        "description": "History of Rocketry.",
+        "module": "M101"
+      },
+      {
+        "_id": "L1012",
+        "name": "Rocket Propulsion Fundamentals",
+        "description": "Rocket Propulsion Fundamentals.",
+        "module": "M101"
+      },
+      {
+        "_id": "L1013",
+        "name": "Rocket Engine Types",
+        "description": "Rocket Engine Types.",
+        "module": "M101"
+      }
+    ]
+  },
+  {
+    "_id": "M102",
+    "name": "Fuel and Combustion",
+    "description": "Fuel and Combustion for RS101.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": "L1021",
+        "name": "Rocket Fuel",
+        "description": "Rocket Fuel.",
+        "module": "M102"
+      },
+      {
+        "_id": "L1022",
+        "name": "Combustion Processes",
+        "description": "Combustion Processes.",
+        "module": "M102"
+      },
+      {
+        "_id": "L1023",
+        "name": "Combustion Instability",
+        "description": "Combustion Instability.",
+        "module": "M102"
+      },
+      {
+        "_id": "L204",
+        "name": "Nozzle Design",
+        "description": "How nozzle shape affects thrust.",
+        "module": "M102"
+      }
+    ]
+  },
+  {
+    "_id": "M103",
+    "name": "Nozzles and Thrust",
+    "description": "Nozzles and Thrust for RS101.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": "L1031",
+        "name": "Nozzle Geometry",
+        "description": "Nozzle Geometry.",
+        "module": "M103"
+      },
+      {
+        "_id": "L1032",
+        "name": "Thrust Equation",
+        "description": "Thrust Equation.",
+        "module": "M103"
+      },
+      {
+        "_id": "L1033",
+        "name": "Specific Impulse",
+        "description": "Specific Impulse.",
+        "module": "M103"
+      }
+    ]
+  },
+  {
+    "_id": "M201",
+    "name": "Introduction to Aerodynamics",
+    "description": "Introduction to Aerodynamics for RS102.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "L2011",
+        "name": "Airflow Basics",
+        "description": "Airflow Basics.",
+        "module": "M201"
+      },
+      {
+        "_id": "L2012",
+        "name": "Lift and Drag",
+        "description": "Lift and Drag.",
+        "module": "M201"
+      },
+      {
+        "_id": "L2013",
+        "name": "Airfoils",
+        "description": "Airfoils.",
+        "module": "M201"
+      }
+    ]
+  },
+  {
+    "_id": "M202",
+    "name": "Compressible Flow",
+    "description": "Compressible Flow for RS102.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "L2021",
+        "name": "Mach Number",
+        "description": "Mach Number.",
+        "module": "M202"
+      },
+      {
+        "_id": "L2022",
+        "name": "Shock Waves",
+        "description": "Shock Waves.",
+        "module": "M202"
+      },
+      {
+        "_id": "L2023",
+        "name": "Supersonic Flow",
+        "description": "Supersonic Flow.",
+        "module": "M202"
+      }
+    ]
+  },
+  {
+    "_id": "M203",
+    "name": "Aircraft Design",
+    "description": "Aircraft Design for RS102.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "L2031",
+        "name": "Wing Design",
+        "description": "Wing Design.",
+        "module": "M203"
+      },
+      {
+        "_id": "L2032",
+        "name": "Stability and Control",
+        "description": "Stability and Control.",
+        "module": "M203"
+      },
+      {
+        "_id": "L2033",
+        "name": "Wind Tunnel Testing",
+        "description": "Wind Tunnel Testing.",
+        "module": "M203"
+      }
+    ]
+  },
+  {
+    "_id": "M301",
+    "name": "Spacecraft Systems",
+    "description": "Spacecraft Systems for RS103.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "L3011",
+        "name": "Structures",
+        "description": "Structures.",
+        "module": "M301"
+      },
+      {
+        "_id": "L3012",
+        "name": "Power Systems",
+        "description": "Power Systems.",
+        "module": "M301"
+      },
+      {
+        "_id": "L3013",
+        "name": "Thermal Control",
+        "description": "Thermal Control.",
+        "module": "M301"
+      }
+    ]
+  },
+  {
+    "_id": "M302",
+    "name": "Orbital Mechanics",
+    "description": "Orbital Mechanics for RS103.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "L3021",
+        "name": "Kepler's Laws",
+        "description": "Kepler's Laws.",
+        "module": "M302"
+      },
+      {
+        "_id": "L3022",
+        "name": "Orbital Maneuvers",
+        "description": "Orbital Maneuvers.",
+        "module": "M302"
+      },
+      {
+        "_id": "L3023",
+        "name": "Transfer Orbits",
+        "description": "Transfer Orbits.",
+        "module": "M302"
+      }
+    ]
+  },
+  {
+    "_id": "M303",
+    "name": "Mission Design",
+    "description": "Mission Design for RS103.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "L3031",
+        "name": "Payload Integration",
+        "description": "Payload Integration.",
+        "module": "M303"
+      },
+      {
+        "_id": "L3032",
+        "name": "Systems Engineering",
+        "description": "Systems Engineering.",
+        "module": "M303"
+      },
+      {
+        "_id": "L3033",
+        "name": "Launch Windows",
+        "description": "Launch Windows.",
+        "module": "M303"
+      }
+    ]
+  }
+]
