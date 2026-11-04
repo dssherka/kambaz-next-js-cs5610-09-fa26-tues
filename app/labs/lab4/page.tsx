@@ -18,6 +18,8 @@ import PropDrilling from "./PropDrilling";
 import UrlEncoding from "./UrlEncoding";
 import ContextExamples from "./context/ContextExamples";
 import ZustandExamples from "./zustand/ZustandExamples";
+import ReduxExamples from "./redux/ReduxExamples";
+import Effect from "./Effect";
 
 
 
@@ -46,6 +48,8 @@ export default function Lab4(){
             <UrlEncoding />
             <ContextExamples />
             <ZustandExamples />
+            <ReduxExamples />
+            <Effect />
         </div>
 
     );
