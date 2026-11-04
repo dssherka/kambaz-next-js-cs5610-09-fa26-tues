@@ -20,9 +20,17 @@ export default function ChildStateComponent({
         type="button"
         onClick={() => setCounter(counter - 1)}
         id="wd-decrement-child-state-click"
-        className="rounded bg-red-600 px-3 py-1.5 text-sm font-medium text-white"
+        className="me-2 rounded bg-red-600 px-3 py-1.5 text-sm font-medium text-white"
       >
         Decrement
+      </button>
+      <button
+        type="button"
+        onClick={() => setCounter(123)}
+        id="wd-reset-child-state-click"
+        className="rounded bg-blue-600 px-3 py-1.5 text-sm font-medium text-white"
+      >
+        Reset to 123
       </button>
     </div>
   );
