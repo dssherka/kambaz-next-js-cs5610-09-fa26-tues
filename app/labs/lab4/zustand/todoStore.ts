@@ -13,6 +13,8 @@ type TodoStore = {
   addTodo: (todo: Todo) => void;
   deleteTodo: (id: string) => void;
   updateTodo: (todo: Todo) => void;
+  toggleTodo: (id: string) => void;
+  toggleDone: (id: string) => void;
 };
 
 const emptyTodo: Todo = { id: "-1", title: "Learn Zustand", done: false };
@@ -38,5 +40,14 @@ export const useTodoStore = create<TodoStore>((set) => ({
     set((state) => ({
       todos: state.todos.map((t) => (t.id === todo.id ? todo : t)),
       todo: emptyTodo,
+    })),
+    toggleTodo: (id) => set((state) => ({
+      todos: state.todos.map((t) => (t.id === id ? { ...t, done: !t.done } : t))
+    })),
+  toggleDone: (id) =>
+    set((state) => ({
+      todos: state.todos.map((t) =>
+        t.id === id ? { ...t, done: !t.done } : t
+      ),
     })),
 }));
