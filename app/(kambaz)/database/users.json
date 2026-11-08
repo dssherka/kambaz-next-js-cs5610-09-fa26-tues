@@ -1,0 +1,93 @@
+[
+  {
+    "_id": "123",
+    "username": "tony",
+    "password": "password123",
+    "firstName": "Tony",
+    "lastName": "Stark",
+    "email": "tony@kambaz.dev",
+    "loginId": "001234561S",
+    "section": "S101",
+    "role": "STUDENT",
+    "lastActivity": "2020-10-01",
+    "totalActivity": "10:21:32"
+  },
+  {
+    "_id": "234",
+    "username": "bruce",
+    "password": "password123",
+    "firstName": "Bruce",
+    "lastName": "Wayne",
+    "email": "bruce@kambaz.dev",
+    "loginId": "001234562S",
+    "section": "S101",
+    "role": "STUDENT",
+    "lastActivity": "2020-11-02",
+    "totalActivity": "23:32:23"
+  },
+  {
+    "_id": "345",
+    "username": "steve",
+    "password": "password123",
+    "firstName": "Steve",
+    "lastName": "Rogers",
+    "email": "steve@kambaz.dev",
+    "loginId": "001234563S",
+    "section": "S101",
+    "role": "STUDENT",
+    "lastActivity": "2020-10-02",
+    "totalActivity": "13:21:32"
+  },
+  {
+    "_id": "456",
+    "username": "natasha",
+    "password": "password123",
+    "firstName": "Natasha",
+    "lastName": "Romanoff",
+    "email": "natasha@kambaz.dev",
+    "loginId": "001234564S",
+    "section": "S101",
+    "role": "TA",
+    "lastActivity": "2020-11-05",
+    "totalActivity": "11:22:33"
+  },
+  {
+    "_id": "567",
+    "username": "thor",
+    "password": "password123",
+    "firstName": "Thor",
+    "lastName": "Odinson",
+    "email": "thor@kambaz.dev",
+    "loginId": "001234565S",
+    "section": "S101",
+    "role": "STUDENT",
+    "lastActivity": "2020-12-01",
+    "totalActivity": "11:22:33"
+  },
+  {
+    "_id": "678",
+    "username": "sam",
+    "password": "password123",
+    "firstName": "Sam",
+    "lastName": "Sample",
+    "email": "sam@kambaz.dev",
+    "loginId": "001234566S",
+    "section": "S101",
+    "role": "FACULTY",
+    "lastActivity": "2020-12-04",
+    "totalActivity": "44:33:22"
+  },
+  {
+    "_id": "789",
+    "username": "alex",
+    "password": "password123",
+    "firstName": "Alex",
+    "lastName": "Sample",
+    "email": "alex@kambaz.dev",
+    "loginId": "001234567S",
+    "section": "S101",
+    "role": "TA",
+    "lastActivity": "2020-12-02",
+    "totalActivity": "22:33:44"
+  }
+]
