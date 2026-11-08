@@ -1,27 +1,62 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import * as db from "../../database";
+import { useAccountContext } from "../AccountContext";
 
 export default function Signin() {
+  const [credentials, setCredentials] = useState({
+    username: "",
+    password: "",
+  });
+  const { setCurrentUser } = useAccountContext();
+  const router = useRouter();
+
+  const signin = () => {
+    const user = db.users.find(
+      (u) =>
+        u.username === credentials.username &&
+        u.password === credentials.password,
+    );
+    if (!user) return;
+    setCurrentUser(user);
+    router.push("/dashboard");
+  };
+
+  const input = "mb-2 w-full rounded border border-neutral-300 px-3 py-1.5 text-sm";
+
   return (
     <div id="wd-signin-screen" className="max-w-sm">
       <h1 className="mb-3 text-2xl font-semibold">Sign in</h1>
       <input
         placeholder="username"
-        defaultValue="ada"
-        className="wd-username mb-2 w-full rounded border border-neutral-300 px-3 py-1.5 text-sm"
+        id="wd-username"
+        className={`wd-username ${input}`}
+        value={credentials.username}
+        onChange={(e) =>
+          setCredentials({ ...credentials, username: e.target.value })
+        }
       />
       <input
         placeholder="password"
         type="password"
-        defaultValue="123"
-        className="wd-password mb-2 w-full rounded border border-neutral-300 px-3 py-1.5 text-sm"
+        id="wd-password"
+        className={`wd-password ${input}`}
+        value={credentials.password}
+        onChange={(e) =>
+          setCredentials({ ...credentials, password: e.target.value })
+        }
       />
-      <Link
+      <button
+        type="button"
+        onClick={signin}
         id="wd-signin-btn"
-        href="/dashboard"
-        className="mb-2 block w-full rounded bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white no-underline"
+        className="mb-2 block w-full rounded bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white"
       >
         Sign in
-      </Link>
+      </button>
       <Link id="wd-signup-link" href="/account/signup">
         Sign up
       </Link>

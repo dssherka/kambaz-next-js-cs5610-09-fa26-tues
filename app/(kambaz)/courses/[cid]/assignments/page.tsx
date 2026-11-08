@@ -1,15 +1,22 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { FaPlus, FaSearch } from "react-icons/fa";
 import AssignmentItem from "./AssignmentItem";
-import * as db from "../../../database";
+import { useAssignmentsStore } from "../../../store/assignmentsStore";
 
-export default async function Assignments({
-  params,
-}: {
-  params: Promise<{ cid: string }>;
-}) {
-  const { cid } = await params;
-  const assignments = db.assignments.filter(
-    (assignment) => assignment.course === cid,
+export default function Assignments() {
+  const { cid } = useParams();
+  const courseId = typeof cid === "string" ? cid : "";
+  const allAssignments = useAssignmentsStore((state) => state.assignments);
+  const deleteAssignment = useAssignmentsStore(
+    (state) => state.deleteAssignment,
+  );
+  const [deleteId, setDeleteId] = useState<string | null>(null);
+  const assignments = allAssignments.filter(
+    (assignment) => assignment.course === courseId,
   );
   return (
     <div id="wd-assignments">
@@ -30,13 +37,13 @@ export default async function Assignments({
           >
             <FaPlus /> Group
           </button>
-          <button
+          <Link
             id="wd-add-assignment"
-            type="button"
-            className="inline-flex items-center gap-1 rounded bg-red-600 px-3 py-1.5 text-sm font-semibold text-white"
+            href={`/courses/${courseId}/assignments/new`}
+            className="inline-flex items-center gap-1 rounded bg-red-600 px-3 py-1.5 text-sm font-semibold text-white no-underline"
           >
             <FaPlus /> Assignment
-          </button>
+          </Link>
         </div>
       </div>
       <h3
@@ -52,13 +59,47 @@ export default async function Assignments({
         {assignments.map((assignment) => (
           <AssignmentItem
             key={assignment._id}
-            cid={cid}
+            cid={courseId}
             aid={assignment._id}
             title={assignment.title}
             details={`Multiple Modules | Not available until ${assignment.available} | Due ${assignment.due} | ${assignment.points} pts`}
+            onDelete={() => setDeleteId(assignment._id)}
           />
         ))}
       </ul>
+      {deleteId && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
+          id="wd-delete-assignment-dialog"
+        >
+          <div className="w-full max-w-sm rounded-lg bg-white p-4 shadow-lg">
+            <p className="mb-4">
+              Are you sure you want to remove this assignment?
+            </p>
+            <div className="flex justify-end gap-2">
+              <button
+                type="button"
+                id="wd-delete-assignment-no"
+                className="rounded border border-neutral-300 bg-white px-3 py-1.5 text-sm"
+                onClick={() => setDeleteId(null)}
+              >
+                No
+              </button>
+              <button
+                type="button"
+                id="wd-delete-assignment-yes"
+                className="rounded bg-red-600 px-3 py-1.5 text-sm font-medium text-white"
+                onClick={() => {
+                  deleteAssignment(deleteId);
+                  setDeleteId(null);
+                }}
+              >
+                Yes
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

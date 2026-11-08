@@ -2,8 +2,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "../kambaz.css";
+import { useAccountContext } from "./AccountContext";
 
 export default function AccountNavigation() {
+  const { currentUser } = useAccountContext();
+  const links = currentUser
+    ? (["profile"] as const)
+    : (["signin", "signup"] as const);
   const pathname = usePathname() ?? "";
   const itemClass = (href: string) =>
     pathname === href
@@ -12,15 +17,19 @@ export default function AccountNavigation() {
 
   return (
     <div id="wd-account-navigation" className="wd list-group rounded-none text-sm">
-      <Link href="/account/signin" className={itemClass("/account/signin")}>
-        Signin
-      </Link>
-      <Link href="/account/signup" className={itemClass("/account/signup")}>
-        Signup
-      </Link>
-      <Link href="/account/profile" className={itemClass("/account/profile")}>
-        Profile
-      </Link>
+      {links.map((link) => (
+        <Link
+          key={link}
+          href={`/account/${link}`}
+          className={itemClass(`/account/${link}`)}
+        >
+          {link === "signin"
+            ? "Signin"
+            : link === "signup"
+              ? "Signup"
+              : "Profile"}
+        </Link>
+      ))}
     </div>
   );
 }
