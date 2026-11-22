@@ -12,8 +12,12 @@ const LINKS = [
   { href: "/labs/lab5", id: "wd-lab5-link", label: "Lab 5", match: (p: string) => p.startsWith("/labs/lab5") },
   { href: "https://kambaz.dev/book/ch1", id: "wd-toc-book-link", label: "Chapter 1", match: () => false },
   { href: "/account", id: "wd-kambaz-link", label: "Kambaz", match: () => false },
+  { href: "/dashboard", id: "wd-kambaz-dashboard-link", label: "Dashboard", match: () => false },
   { href: "https://kambaz.dev/book/ch3", id: "wd-book-ch3-link", label: "Book Ch3", match: () => false },
 ] as const;
+
+// On Vercel this is the Render origin (§5.5.3); locally it is http://localhost:4000.
+const HTTP_SERVER = process.env.NEXT_PUBLIC_HTTP_SERVER;
 
 const activeStyle = {
   backgroundColor: "#2563eb",
@@ -53,6 +57,26 @@ export default function TOC() {
           >
             GitHub
           </Link>
+        </li>
+        <li>
+          <Link
+            href="https://github.com/dssherka/webdev-server"
+            id="wd-github-server"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Server GitHub
+          </Link>
+        </li>
+        <li>
+          <a
+            href={HTTP_SERVER}
+            id="wd-server-root"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Server
+          </a>
         </li>
       </ul>
     </div>

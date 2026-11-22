@@ -3,15 +3,16 @@
 import { FaCheckCircle, FaPencilAlt, FaTrash } from "react-icons/fa";
 import { BsPlus } from "react-icons/bs";
 import { IoEllipsisVertical } from "react-icons/io5";
-import { useModulesStore } from "../../../store/modulesStore";
 
 export default function ModuleControlButtons({
   moduleId,
+  editModule,
+  deleteModule,
 }: {
   moduleId: string;
+  editModule: (moduleId: string) => void;
+  deleteModule: (moduleId: string) => void;
 }) {
-  const deleteModule = useModulesStore((state) => state.deleteModule);
-  const editModule = useModulesStore((state) => state.editModule);
   return (
     <div className="flex items-center gap-2">
       <FaPencilAlt

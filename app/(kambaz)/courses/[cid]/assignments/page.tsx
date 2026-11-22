@@ -1,23 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { FaPlus, FaSearch } from "react-icons/fa";
 import AssignmentItem from "./AssignmentItem";
-import { useAssignmentsStore } from "../../../store/assignmentsStore";
+import * as client from "./client";
+import type { Assignment } from "./client";
 
 export default function Assignments() {
   const { cid } = useParams();
   const courseId = typeof cid === "string" ? cid : "";
-  const allAssignments = useAssignmentsStore((state) => state.assignments);
-  const deleteAssignment = useAssignmentsStore(
-    (state) => state.deleteAssignment,
-  );
+  const [assignments, setAssignments] = useState<Assignment[]>([]);
   const [deleteId, setDeleteId] = useState<string | null>(null);
-  const assignments = allAssignments.filter(
-    (assignment) => assignment.course === courseId,
-  );
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (!courseId) return;
+    client
+      .findAssignmentsForCourse(courseId)
+      .then(setAssignments)
+      .catch((e: Error) => setError(e.message));
+  }, [courseId]);
+
+  const deleteAssignment = async (assignmentId: string) => {
+    try {
+      await client.deleteAssignment(assignmentId);
+      setAssignments(assignments.filter((a) => a._id !== assignmentId));
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  };
   return (
     <div id="wd-assignments">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
@@ -46,6 +59,9 @@ export default function Assignments() {
           </Link>
         </div>
       </div>
+      {error && (
+        <p className="mb-2 rounded bg-red-100 px-3 py-2 text-sm text-red-800">{error}</p>
+      )}
       <h3
         id="wd-assignments-title"
         className="mb-3 flex items-center justify-between rounded bg-neutral-200 p-3"

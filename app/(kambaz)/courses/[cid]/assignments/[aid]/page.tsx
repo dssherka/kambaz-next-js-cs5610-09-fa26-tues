@@ -1,43 +1,50 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import {
-  useAssignmentsStore,
-  type Assignment,
-} from "../../../../store/assignmentsStore";
+import * as client from "../client";
+import type { Assignment } from "../client";
 
 export default function AssignmentEditor() {
   const { cid, aid } = useParams();
   const courseId = typeof cid === "string" ? cid : "";
+  const assignmentId = typeof aid === "string" ? aid : "";
   const router = useRouter();
-  const assignments = useAssignmentsStore((state) => state.assignments);
-  const addAssignment = useAssignmentsStore((state) => state.addAssignment);
-  const updateAssignment = useAssignmentsStore(
-    (state) => state.updateAssignment,
-  );
-  const isNew = aid === "new";
-  const [assignment, setAssignment] = useState<Assignment>(
-    () =>
-      assignments.find((a) => a._id === aid) ?? {
-        _id: "",
-        title: "New Assignment",
-        course: courseId,
-        description: "New Description",
-        points: 100,
-        due: "",
-        available: "",
-        availableUntil: "",
-      },
-  );
-  const save = () => {
-    if (isNew) {
-      addAssignment({ ...assignment, course: courseId });
-    } else {
-      updateAssignment(assignment);
+  const isNew = assignmentId === "new";
+  const [assignment, setAssignment] = useState<Assignment>({
+    _id: "",
+    title: "New Assignment",
+    course: courseId,
+    description: "New Description",
+    points: 100,
+    due: "",
+    available: "",
+    availableUntil: "",
+  });
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (isNew || !assignmentId) return;
+    client
+      .findAssignmentById(assignmentId)
+      .then(setAssignment)
+      .catch((e: Error) => setError(e.message));
+  }, [assignmentId, isNew]);
+
+  const save = async () => {
+    try {
+      if (isNew) {
+        const { _id, ...newAssignment } = assignment;
+        void _id;
+        await client.createAssignmentForCourse(courseId, newAssignment);
+      } else {
+        await client.updateAssignment(assignment);
+      }
+      router.push(`/courses/${courseId}/assignments`);
+    } catch (e) {
+      setError((e as Error).message);
     }
-    router.push(`/courses/${courseId}/assignments`);
   };
   const field = "mb-4";
   const label = "mb-1 block text-sm font-semibold";
@@ -45,6 +52,9 @@ export default function AssignmentEditor() {
 
   return (
     <div id="wd-assignments-editor" className="max-w-2xl">
+      {error && (
+        <p className="mb-2 rounded bg-red-100 px-3 py-2 text-sm text-red-800">{error}</p>
+      )}
       <div className={field}>
         <label htmlFor="wd-name" className={label}>Assignment Name</label>
         <input
